@@ -11,6 +11,7 @@ body {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px #d5ab92;
+    text-align: center;
 }
 
 input#file {
@@ -27,4 +28,5 @@ button#btn {
     border: none;
     border-radius: 15px;
     cursor: pointer;
+    margin: 5px;
 }
