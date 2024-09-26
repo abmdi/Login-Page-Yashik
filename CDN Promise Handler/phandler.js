@@ -5,14 +5,20 @@ let loadCDN = src => {
         let cssLink = document.createElement('link')
         cssLink.rel = 'stylesheet'
         cssLink.href = src
-        resolved(cssLink)
+        document.head.appendChild(cssLink)
+        cssLink.onload = () => {
+            resolved(cssLink)
+        }
+        cssLink.onerror = () => {
+            rejected(new Error(`Failed to load CSS from ${src}`))
+        }
     })
 }
 
-loadCDN('./kjahsd/asd.css')
+loadCDN('./style.css')
     .then((msg) => {
-        console.log(msg);
+        console.log(`CSS load Successfully.`);
     })
-    .catch(() => {
-        console.log('error')
+    .catch((error) => {
+        console.log(error)
     })
