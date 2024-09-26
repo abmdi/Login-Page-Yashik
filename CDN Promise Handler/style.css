@@ -5,3 +5,26 @@ body {
     align-items: center;
     height: 100vh;
 }
+
+.form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #d5ab92;
+}
+
+input#file {
+    display: block;
+    margin: 20px auto;
+    padding: 20px;
+    border: none;
+}
+
+button#btn {
+    background-color: #d5ab92;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
